@@ -1,6 +1,6 @@
 {
   "name": "@reacter/openapitools",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Adapter for AI tools compatible with OpenAI, Anthropic, and LangChain",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
