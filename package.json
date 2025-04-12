@@ -1,0 +1,59 @@
+{
+  "name": "@reacter/openapitools",
+  "version": "1.0.0",
+  "description": "Adapter for AI tools compatible with OpenAI, Anthropic, and LangChain",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/types/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "npm run build:esm && npm run build:cjs && npm run build:types",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build:types": "tsc -p tsconfig.types.json",
+    "clean": "rimraf dist",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "keywords": [
+    "ai",
+    "tools",
+    "openai",
+    "anthropic",
+    "langchain",
+    "agent"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.8.0",
+    "rimraf": "^5.0.1",
+    "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "@anthropic-ai/sdk": ">=0.8.0",
+    "openai": ">=4.0.0"
+  },
+  "peerDependenciesMeta": {
+    "openai": {
+      "optional": true
+    },
+    "@anthropic-ai/sdk": {
+      "optional": true
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "zod": "^3.24.2"
+  }
+}
