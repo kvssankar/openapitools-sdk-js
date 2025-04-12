@@ -55,5 +55,13 @@
   },
   "dependencies": {
     "zod": "^3.24.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kvssankar/openapitools-sdk-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kvssankar/openapitools-sdk-js/issues"
+  },
+  "homepage": "https://docs.openapitools.com"
 }
